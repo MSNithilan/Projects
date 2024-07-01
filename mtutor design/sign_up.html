@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign_up.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Co Headline Light";
+            src: url("./assets/Co Headline Light.otf");
+            font-weight: 400;
+          }
+    </style>
+</head>
+<body>
+    <section style="display: flex;">
+        <div class="left-sec">
+            <img src="./assets/Ellipse 5511.svg" alt="" id="ellipse-1" class="ellipse">
+            <img src="./assets/Group 1000004296 (1) 1.svg" alt="" id="logo-img">
+            <img src="./assets/pikaso_texttoimage_suduku-game-with-some-graphical-shapes-in-3d-style 1.svg" alt="" id="pikaso">
+            <img src="./assets/Ellipse 5512.svg" alt="" id="ellipse-2" class="ellipse">
+        </div>
+        <div class="right-sec">
+            <h1>Register your account</h1>
+            <h4 class="poppins">Play and train your mind !</h4>
+            <form action="">
+                <label for="name"><h4>Name</h4></label>
+                <input type="text" id="name" name="name" class="ip-align" placeholder="Enter your email">
+                <label for="email"><h4>Email</h4></label>
+                <input type="email" name="email" id="email" class="ip-align" placeholder="Enter Your Email ID">
+                <label for="phone"><h4>Phone Number</h4></label>
+                <div class="phno">
+                    <select name="country-code" id="country-code" class="ip-align">
+                        <option value="91">+91</option>
+                    </select>
+                    <input type="tel" name="phone" id="phone" class="ip-align" placeholder="Enter Your Phone Number">
+                </div>
+                <label for="password"><h4>Password</h4></label>
+                <input type="password" name="password" id="password" class="ip-align" placeholder="Enter Your Password">
+                <div class="validations">
+                    <p>Password must be at least <a href="" class="disabled">8 Characters</a> & must contain at least a <a href="" class="disabled">Capital Letter</a>, a Number & a Special Character.</p>
+                </div>
+                <div style="display: flex;">
+                    <input type="checkbox" name="agree" id="agree">
+                    <h5 class="i-agree">I Agree</h5>
+                </div>
+                <button id="sign_in" type="button">Sign Up</button>
+            </form>
+            <div class="acc-exists">
+                <h4>Already have an account? <a href="sign_in.html">Sign In</a></h4>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    document.querySelector('#sign_in').addEventListener('click',()=>{
+        window.location.href='sign_in.html';
+    });
+</script>
+</html>

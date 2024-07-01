@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-proxima-nova: "Proxima Nova";
+  --font-font-awesome-5-brands: "Font Awesome 5 Brands";
+  --font-du-co-headline-16-ios: "du Co Headline 16 iOS";
+  --font-poppins: Poppins;
+  --font-roboto: Roboto;
+  --font-slackey: Slackey;
+
+  /* font sizes */
+  --font-size-13xl: 32px;
+  --font-size-lgi: 19px;
+  --font-size-7xl: 26px;
+  --font-size-11xl: 30px;
+  --font-size-lg: 18px;
+  --font-size-5xl: 24px;
+  --font-size-11xl-3: 30.3px;
+  --font-size-mid: 17px;
+  --font-size-base-4: 15.4px;
+  --font-size-base-3: 15.3px;
+  --font-size-45xl: 64px;
+  --font-size-19xl: 38px;
+  --font-size-32xl: 51px;
+  --font-size-6xl-3: 25.3px;
+  --font-size-xl: 20px;
+  --font-size-mid-8: 17.8px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-whitesmoke: #ededed;
+  --color-ghostwhite: #f5f6ff;
+  --color-royalblue: #2b7ffc;
+  --color-slateblue: rgba(96, 54, 171, 0.65);
+  --color-gray-100: rgba(0, 30, 61, 0.5);
+
+  /* Gaps */
+  --gap-30xl-5: 49.5px;
+  --gap-10xl: 29px;
+  --gap-xl: 20px;
+  --gap-3xl: 22px;
+  --gap-mini: 15px;
+  --gap-4xl: 23px;
+  --gap-5xl: 24px;
+  --gap-base-5: 15.5px;
+  --gap-mid: 17px;
+  --gap-26xl: 45px;
+  --gap-27xl-2: 46.2px;
+
+  /* Paddings */
+  --padding-2xl: 21px;
+  --padding-xl: 20px;
+  --padding-10xs: 3px;
+  --padding-3xs: 10px;
+  --padding-7xs: 6px;
+  --padding-11xs: 2px;
+  --padding-base: 16px;
+  --padding-5xl: 24px;
+  --padding-5xs: 8px;
+  --padding-sm: 14px;
+  --padding-8xs: 5px;
+  --padding-16xl: 35px;
+  --padding-131xl: 150px;
+  --padding-mid-4: 17.4px;
+  --padding-lg: 18px;
+  --padding-15xl: 34px;
+  --padding-4xl: 23px;
+  --padding-mid: 17px;
+  --padding-9xs: 4px;
+  --padding-11xl: 30px;
+
+  /* Border radiuses */
+  --br-5xl: 24px;
+  --br-11xl: 30px;
+  --br-36xl: 55px;
+}
