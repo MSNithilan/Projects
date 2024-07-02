@@ -1,0 +1,95 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./cs.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="forms-container">
+                <div class="signin-signup">
+                    <form action="signinpage.php" class="sign-in-form" method="post" novalidate id="signin">
+                        <h2 class="title">Sign in</h2>
+                        <div class="input-field">
+                            <i class="bx bxs-user"></i>
+                            <input type="text" placeholder="User Name" name="username_signin" id="username_signin">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="bx bxs-lock-alt"></i>
+                            <input type="password" placeholder="Password" name="password_signin" id="password_signin"> 
+                        </div>
+
+                        <input type="submit" value="Login" class="btn solid">
+
+                        <p class="social-text">Or Sign in with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-google"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                        </div>
+                    </form>
+                    
+                    <form action="signuppage.php" class="sign-up-form" method="post" novalidate id="signup">
+                        <h2 class="title">Sign Up</h2>
+                        <div class="input-field">
+                            <i class="bx bxs-user"></i>
+                            <input type="text" placeholder="User Name" name="username_signup" required id="username_signup">
+                        </div>
+                        <div class="input-field">
+                            <i class="bx bxs-envelope"></i>
+                            <input type="email" placeholder="Email" name="email_signup" required id="email_signup">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="bx bxs-lock-alt"></i>
+                            <input type="password" placeholder="Password" name="password_signup" required id="password_signup">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="bx bxs-lock-alt"></i>
+                            <input type="password" placeholder="Confirm Password" name="confirm-password_signup" required id="confirm-password_signup">
+                        </div>
+
+                        <input type="submit" value="Sign Up" class="btn solid">
+                        <p class="social-text">Or Sign up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-google"></i></a>
+                            <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New here ?</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, dolorem!</p>
+                        <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                    </div>
+
+                    <img src="undraw_video_game_night_8h8m.svg" class="image" alt="picture">
+                </div>
+
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>One of us ?</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, dolorem!</p>
+                        <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                    </div>
+
+                    <img src="undraw_video_streaming_re_v3qg.svg" class="image" alt="picture">
+                </div>
+
+
+            </div>
+        </div>
+        <script src="./app.js"></script>
+
+</body></html>
