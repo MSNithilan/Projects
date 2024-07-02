@@ -26,6 +26,8 @@ const ans_key=["-BASS","FISHY","ORSON","ADOUT","MIRTH","SETS"];
             }
             current=box;
             current.style.background="orange";
+            const existingHighlights = document.querySelectorAll(".highlighted-cell");
+            existingHighlights.forEach((element) => element.classList.remove("highlighted-cell"));
         }
     }
     document.body.onkeyup=function(event){
@@ -39,6 +41,7 @@ const ans_key=["-BASS","FISHY","ORSON","ADOUT","MIRTH","SETS"];
             }
             if(event.keyCode==8 || event.keyCode==46){
                 current.querySelector("b").innerHTML="";
+                nextmover(37); //left
             }
         }
     }
@@ -66,6 +69,8 @@ const ans_key=["-BASS","FISHY","ORSON","ADOUT","MIRTH","SETS"];
         }
         if(current.classList.contains("w")){
             current.style.background="transparent";
+            const existingHighlights = document.querySelectorAll(".highlighted-cell");
+            existingHighlights.forEach((element) => element.classList.remove("highlighted-cell"));
         }
         current=document.querySelectorAll("tr")[row].querySelectorAll("th")[col];
         if(current.classList.contains("b")){
@@ -114,7 +119,82 @@ function color_clear(){
 const btnElList=document.querySelectorAll('.btn');
 btnElList.forEach(btnEl=>{
     btnEl.addEventListener('click',()=>{
-        document.querySelector('.active')?.classList.remove('active')
-        btnEl.classList.add('active')
-    })
-});
+        document.querySelector('.active')?.classList.remove('active');
+        btnEl.classList.add('active');
+        const num = getSelectedNumber();
+        const tableElement=document.getElementById("table");
+        highlightRowCells(selectTableCell(tableElement,num));
+        }
+    )
+}); 
+
+const btnElList2=document.querySelectorAll('.btn2');
+btnElList2.forEach(btnEl=>{
+    btnEl.addEventListener('click',()=>{
+        document.querySelector('.active')?.classList.remove('active');
+        btnEl.classList.add('active');
+        const num = getSelectedNumber();
+        const tableElement=document.getElementById("table");
+        highlightColumnCells(selectTableCell(tableElement,num));
+        }
+    )
+}); 
+
+function getSelectedNumber() {
+    const selectedButton = document.querySelector(".active");
+    if (selectedButton) {
+      const numberElement = selectedButton.querySelector("b.num");
+      if (numberElement) {
+        const numberString = numberElement.innerText.toString();
+        for (const key in spans_value) {
+            if (spans_value[key] === numberString) {
+              return key;
+            }
+          }
+          return undefined;
+      } else {
+        return null;
+      }
+    } else {
+      return null;
+    }
+}
+function selectTableCell(tableElement, keyPair) {
+    const [rowIndex, columnIndex] = keyPair.split(",");
+    const row = parseInt(rowIndex);
+    const col = parseInt(columnIndex);
+    if (!tableElement || row < 0 || col < 0) {
+      return; 
+    }
+    const selectedCell = tableElement.rows[row].cells[col];
+    myclick(selectedCell);
+    return selectedCell
+}
+
+function highlightRowCells(selectedCell) {
+    const ele_var = document.querySelectorAll(".highlighted-cell");
+    ele_var.forEach((element) => {  
+        element.classList.remove("highlighted-cell");  
+        });  
+    const row = selectedCell.parentNode;
+    for (const cell of row.cells) {
+        if(cell.classList.contains("w")){
+            cell.classList.add("highlighted-cell");
+        }
+    }
+}
+  
+  function highlightColumnCells(selectedCell) {
+    const existingHighlights = document.querySelectorAll(".highlighted-cell");
+    existingHighlights.forEach((element) => element.classList.remove("highlighted-cell"));
+    const tableBody = selectedCell.parentNode.parentNode; 
+    const columnIndex = selectedCell.cellIndex;
+    for (const row of tableBody.rows) {
+      const cellToHighlight = row.cells[columnIndex];
+      if (cellToHighlight) { 
+        if (cellToHighlight.classList.contains("w")) { 
+          cellToHighlight.classList.add("highlighted-cell");
+        }
+      }
+    }
+}
